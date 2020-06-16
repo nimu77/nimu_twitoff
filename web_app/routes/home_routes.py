@@ -12,3 +12,5 @@ def index():
 @home_routes.route("/about")
 def about():
     return "This is a test."
+
+    # return render_template("aboutme.html", message="Here's some bike trails in Washington", trails=trails)
