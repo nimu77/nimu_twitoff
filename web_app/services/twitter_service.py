@@ -21,9 +21,10 @@ def twitter_api():
 if __name__ == "__main__":
 
     api = twitter_api()
-    user = api.get_user("nyemho1")
+    user = api.get_user("elonmusk")
     print("USER", user)
     print(user.screen_name)
     print(user.name)
     print(user.followers_count)
-    print(user.following_count)
+
+    breakpoint()

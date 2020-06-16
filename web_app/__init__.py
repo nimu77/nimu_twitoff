@@ -4,6 +4,7 @@ from flask import Flask
 from web_app.model import db, migrate
 from web_app.routes.home_routes import home_routes
 from web_app.routes.bike_trail import bike_trail
+from web_app.routes.twitter_routes import twitter_routes
 
 DATABASE_URL = "sqlite:///twitoff_15_trails.db"
 
@@ -17,6 +18,7 @@ def create_app():
 
     app.register_blueprint(home_routes)
     app.register_blueprint(bike_trail)
+    app.register_blueprint(twitter_routes)
     return app
 
 if __name__ == "__main__":
