@@ -6,8 +6,12 @@ from web_app.routes.home_routes import home_routes
 from web_app.routes.bike_trail import bike_trail
 from web_app.routes.twitter_routes import twitter_routes
 from web_app.routes.stats_routes import stats_routes
+from dotenv import load_dotenv
+import os
 
-DATABASE_URL = "sqlite:///twitoff_15_trails.db"
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 def create_app():
     app = Flask(__name__)
